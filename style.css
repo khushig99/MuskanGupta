@@ -1,0 +1,500 @@
+/* applying google font over the website */
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    background-color: black; /* Set the background color of the entire website to black */
+    color: white; /* Change text color to white for better contrast */
+}
+
+/* styling menu icon */
+/* Navbar Menu Styling */
+.nav-menu {
+    border: none;
+    background-color: #003366; /* Light Gray */
+    font-size: 1.5rem;
+    color: #fca61f; /* Keep the menu icon color as #fca61f */
+}
+
+/* Styling Navbar Links */
+.navbar-nav a {
+    color: rgb(128, 128, 128); /* White color for links */
+    position: relative;
+    text-decoration: none; /* Remove underline by default */
+    padding: 10px 15px;
+    border-radius: 0.5rem;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Navbar Links Hover Effect */
+.navbar-nav a:hover {
+    color: #fca61f; /* Hover text color */
+    background-color: #333; /* Optional: Add background color on hover for a more interactive look */
+}
+
+/* Underline Effect */
+.navbar-nav a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    top: 35px;
+    position: absolute;
+    background: #fca61f; /* Underline color */
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0; /* Initially, the underline width is 0 */
+}
+
+/* Underline on Hover */
+.navbar-nav a:hover:after { 
+    width: 100%; 
+    left: 0; /* Expand the underline to full width on hover */
+}
+
+/* Active Link Styling */
+.navbar-nav a.active {
+    color: #fca61f; /* Active link color */
+    background-color: #333; /* Active link background color */
+    border-radius: 0.5rem; /* Optional: Rounded corners for active links */
+}
+
+
+/* styling contact btn */
+.c-btn{
+    border: none;
+    background: #fca61f; /* Button background remains orange */
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* styling home section */
+.home{
+    background: linear-gradient(33deg, rgba(0,0,0,1) 0%, rgba(30,30,30,1) 100%); /* Set gradient background to dark tones */
+    padding: 30px 0px 10px 0px;
+}
+
+/* styling home section heading */
+.home h2{
+    font-size: 3rem;
+    line-height: 4rem;
+    color: white; /* Ensure heading text is white on the black background */
+}
+
+/* styling orange-colored text */
+.c-orange{
+    color: #6f34fe;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+/* styling paragraph in home section */
+.home p{
+    width: fit-content;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: white; /* Ensure text color is white */
+}
+
+/* hover effect for button */
+.h-btn:hover{
+    background: #6f34fe;
+    color: #fff;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+
+/* styling links */
+.link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fca61f; /* Set link color to orange */
+    position: relative;
+}
+
+.link::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    top: 20px;
+    background-color: #6f34fe;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.link:hover{
+    color: #6f34fe;
+}
+
+.link:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* adding animation to home section image */
+.home img{
+    animation: floatimg 4s ease-in-out infinite;
+}
+
+/* keyframes for image floating effect */
+@keyframes floatimg {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-24px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+/* expertise section starts */
+.heading small{
+    color: #6f34fe; /* Keep the same color for smaller text */
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.heading h3{
+    margin-top: 0.5rem;
+    color: white; /* Change to white for visibility on black background */
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.expertise h4{
+    color: white; /* Change to white for better contrast */
+    font-weight: 700;
+}
+
+.expertise a{
+    text-decoration: none;
+    color: #fca61f; /* Orange color for links */
+}
+
+.expertise a:hover{
+    color: #6f34fe; /* Hover effect with purple color */
+}
+
+.expertise .service-card{
+    text-align: center;
+    padding: 15px 15px;
+    border-radius: 0.7rem;
+    background-color: #333; /* Dark background for service cards */
+    color: white; /* White text inside service cards */
+}
+
+/* skill section starts */
+.skill{
+    background-color: #111; /* Dark background for skill section */
+    padding: 50px 0;
+}
+
+.progress-card{
+    padding: 12% 10% 10% 15%;
+    background-color: #444; /* Dark background for progress cards */
+    text-align: center;
+    border-radius: 10%;
+    color: white; /* White text inside progress cards */
+}
+
+.progress-card:hover{
+    transform: scale(1.1, 1.1);
+    transition-duration: 0.6s;
+}
+
+.circular-progress{
+    position: relative;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #333; /* Darker background inside circular progress */
+}
+
+.progress-value{
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white; /* White color for text inside the progress circle */
+}
+
+.html-progress{
+    color: #fca61f; /* Orange color for HTML progress */
+}
+
+.javascript-progress{
+    color: #6f34fe; /* Purple color for JavaScript progress */
+}
+
+.php-progress{
+    color: #20c997; /* Green color for PHP progress */
+}
+
+.reactjs-progress{
+    color: #3f396d; /* Dark purple color for ReactJS progress */
+}
+
+.text{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white; /* White text for the description */
+}
+
+.heading p{
+    font-size: 1.3rem;
+    color: white; /* White color for paragraph text in the heading */
+}
+
+/* portfolio section starts */
+/* portfolio section starts */
+#myBtnContainer{
+    margin-bottom: 45px;
+}
+#myBtnContainer button{
+  border: none;
+  font-color: white;
+  color: white;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;   
+  display: inline-block;
+  margin: 0 25px;
+}
+#myBtnContainer button:hover{
+    color: #fca61f;
+}
+
+#myBtnContainer button:focus{
+    outline: none;
+}
+.post .content h4{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.post .card{
+    border: none;
+}
+
+/* Removed the hover effect */
+
+
+/* Testimonial Section */
+.testimonial img:hover{
+    transform: scale(2,2);
+    transition-duration: 2s;
+}
+
+.testimonial h4{
+    color: #fff; /* White color for testimonial heading to contrast with dark background */
+}
+
+.testimonial i{
+    font-size: 2.9rem;
+    color: #fca61f; /* Orange color for testimonial icons */
+}
+
+.testimonial .nextprev-btn{
+    border: none;
+    background-color: #333; /* Dark background for the buttons */
+}
+
+.prev:hover, .prev-btn:hover{
+    color: #6f34fe; /* Purple color for hover on previous button */
+    transform: translateX(-10px);
+    transition-duration: 1s;
+}
+
+.next:hover, .next-btn:hover{
+    color: #6f34fe; /* Purple color for hover on next button */
+    transform: translateX(10px);
+    transition-duration: 1s;
+}
+
+/* Blog Section */
+.blog{
+    background-color: #333; /* Dark background for the blog section */
+}
+
+.blog .blogpost .card{
+    border: none;
+    border-radius: 5%;
+    background-color: #444; /* Darker background for blog posts */
+}
+
+.nav-bg{
+    background-color: #333; /* Dark navbar background */
+}
+
+.blog .blogpost small{
+    color: #6f34fe; /* Purple color for small text in the blog */
+    font-size: 1.1rem;
+}
+
+.blog .blogpost h4, .blogpost a{
+    color: #fff; /* White color for blog post title and link */
+    font-weight: 700;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.blogpost a:hover{
+    color: #fca61f; /* Orange color on hover for blog post links */
+}
+
+.blog .blogpost .read-more-btn{
+    text-decoration: none;
+    color: #fca61f; /* Orange color for read-more button */
+    font-size: 1.1rem;
+}
+
+.blog .blogpost .read-more-btn:hover{
+    color: #6f34fe; /* Purple color for read-more button hover */
+}
+
+/* Styling Modal Group */
+.btn-c {
+    margin-left: 94%;
+    background-color: transparent;
+    border: none;
+    color: #fff; /* White text for better visibility */
+    font-size: 2rem;
+    margin-top: -3%;
+}
+
+.btn-c i {
+    color: #fca61f; /* Orange icon color for contrast */
+}
+
+.modal-body .content span {
+    font-size: 1rem;
+    color: #fff; /* White color for modal content text */
+}
+
+.modal-body .content small {
+    font-size: 1rem;
+    color: #6f34fe; /* Purple color for small text */
+}
+
+/* Contact Section Starts */
+.contact {
+    background-color: #333; /* Dark background for the contact section */
+    color: #fff; /* White text color for contrast */
+}
+
+.contact-details i {
+    font-size: 1.5rem;
+    color: #fca61f; /* Orange color for icons */
+}
+
+.contact-details p {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+/* Contact Form Styling */
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border: 1px solid #fca61f; /* Orange border on focus */
+}
+
+.contact-form .form-control {
+    padding: 10px 10px;
+    width: 80%;
+    background-color: #444; /* Dark background for the form input */
+    color: #fff; /* White text color for form inputs */
+    border: 1px solid #666; /* Subtle border for form inputs */
+}
+
+/* Footer Section Starts */
+footer {
+    background-color: #211e39; /* Dark footer background */
+    color: #fff; /* White text color for footer */
+}
+
+footer .link-group a {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #6c757d; /* Light grey color for footer links */
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+footer .link-group a:hover {
+    color: #fca61f; /* Orange color on hover for footer links */
+}
+
+.social-links button {
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    background-color: #fff; /* White background for social buttons */
+    padding: 14px 15px 10px 15px;
+    color: #333; /* Dark text for better contrast */
+}
+
+.social-links .dribble {
+    color: #f33a7e; /* Dribbble icon color */
+}
+
+.social-links button:hover {
+    color: #fff;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+    background-color: #6f34fe; /* Purple background on hover */
+}
+
+.social-links .dribble:hover {
+    background-color: #f33a7e;
+}
+
+.social-links .whatsapp {
+    color: #25D366; /* WhatsApp icon color */
+}
+
+.social-links .whatsapp:hover {
+    background-color: #25D366;
+}
+
+.social-links .behance {
+    color: #255afc; /* Behance icon color */
+}
+
+.social-links .behance:hover {
+    background-color: #255afc;
+}
+
+/* Styling Back to Top Button */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    font-size: 1.4rem;
+    background-color: #fca61f; /* Orange button color */
+    color: #fff; /* White text for contrast */
+    animation: pulse 3s infinite;
+}
+
+#btn-back-to-top:hover {
+    background-color: #6f34fe; /* Purple background on hover */
+}
